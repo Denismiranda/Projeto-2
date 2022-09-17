@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+
+body *{
+    font-family: 'inter', sans-serif;
+}
+
+body{
+    background-image: url(./assets/Bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+header{
+    margin-top: 32px;
+    text-align: center;
+    height: calc(120px + 32px);
+}
+
+header img{
+    width: 100%;
+    border-radius: 40%;   
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #C91842 0%, #95698E 50.52%, #5CC2E2 100%);
+    border-radius: 40%;
+    display: flex;
+    padding: 6px;
+    transition: transform 0.3s;
+}
+
+header div:hover {
+    transform: scale(1.1);
+    
+}
+
+main{
+    max-width: 580px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 32px;
+    
+}
+
+section{ 
+    color: white; 
+    background-image: linear-gradient(90deg, #C91842 0%, #95698E 50.52%, #5CC2E2 100%); 
+    padding-top: 4px;
+    border-radius: 10px; 
+}
+
+
+section div{
+    background-color: #262629;
+    padding: 32px;
+    border-radius: 8px;
+    
+}
+
+section h2{
+    letter-spacing: 1px;
+}
+
+section p{
+    letter-spacing: 0.25px;
+}
+
+section ul{
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+section ul li{
+    transition: transform 0.3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+
+.Filmes img{
+    border-radius: 8px;
+}
+
+.Séries img{
+    border-radius: 8px;
+}
+
+.Social-list img{
+    border-radius: 40%;
+    width: 70px;
+    border: 1px solid #443e54;
+}
+
+/* Animation */
+
+header div{
+    animation:fromtop .4s  backwards;
+}
+
+main section{
+    animation: frombottom .6s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: .2s;
+}
+
+main section:nth-child(3){
+    animation-delay: .4s;
+}
+
+@keyframes fromtop {
+    from{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes frombottom {
+    from{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
